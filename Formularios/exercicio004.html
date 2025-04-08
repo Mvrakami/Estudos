@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form action="formulario.php" method="get">
+        <p>
+            <label for="iest">Estados</label>
+                <select name="est" id="iest">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissões</label>
+            <input type="text" id="ilista" list="iop" placeholder="digite aqui sua profissão">
+                <datalist id="iop">
+                    <option value="PROF">Professor</option>
+                    <option value="ADV">Advogado</option>
+                    <option value="DEN">Dentista</option>
+                </datalist>
+        </p>
+
+        <p>
+            <input type="submit" name="" id="">
+            <input type="reset" name="" id="">
+        </p>
+
+
+
+
+
+    </form>
+    
+</body>
+</html>
