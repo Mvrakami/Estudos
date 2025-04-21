@@ -1,0 +1,16 @@
+name: Deploy do Exercício 5 
+on:
+  push:
+    branches: [main]  
+    paths: ['Media Queries/exercicio5/**']  # Exemplo: 'exercicio-1/**' ou 'html-css/ex1/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: mv nome-da-pasta ./pasta-temporaria  # Move a pasta do exercício para a raiz
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pasta-temporaria  # Faz deploy apenas dessa pasta
